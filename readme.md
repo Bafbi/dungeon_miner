@@ -1,9 +1,8 @@
-# Dungeon Miner
+# Dungeon Miner Dev branch
 
-Dungeon miner is a game coded in C and render in the console.
+### Working on :
 
-Current look of the game :  
-![](https://cdn.discordapp.com/attachments/676180251155365893/957596506741964840/unknown.png)
+> Creating a better render
 
 ---
 
