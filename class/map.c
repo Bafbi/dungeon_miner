@@ -72,9 +72,10 @@ Chunk generateChunk(Pos pos)
         int type = perlinCave[i] < 0.5 ? AIR_BLOCK : perlinOre[i] < 0.95 ? STONE_BLOCK
                                                                          : MYTRILE_BLOCK;
         int dura;
-        dura = perlinCave[i] < 0.7 ? 1 : perlinCave[i] < 0.8 ? 2
-                                     : perlinCave[i] < 0.9   ? 3
-                                                             : 4;
+        dura = type == AIR_BLOCK ? 0 : perlinCave[i] < 0.7 ? 1
+                                   : perlinCave[i] < 0.8   ? 2
+                                   : perlinCave[i] < 0.9   ? 3
+                                                           : 4;
         Block block = {type, dura};
         chunk.blockData[i] = block;
     }
