@@ -24,6 +24,13 @@ Pos multiplyPos(Pos pos1, Pos pos2)
     return newPos;
 }
 
+Pos dividePosByCnt(Pos pos, int cnt)
+{
+    Pos newPos = {floor((float)pos.x / (float)cnt),
+                  floor((float)pos.y / (float)cnt)};
+    return newPos;
+}
+
 typedef struct Vec2
 {
     double x, y;
