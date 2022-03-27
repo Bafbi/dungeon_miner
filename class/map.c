@@ -36,8 +36,6 @@ Chunk generateChunk(Pos pos);
 void loadChunk(Map *map, Pos pos);
 Map initMap();
 void update(Map *map);
-Pos addPos(Pos pos1, Pos pos2);
-Pos multiplyPos(Pos pos1, Pos pos2);
 bool testCollision(Map *map, Pos move);
 void mineBlock(Map *map, Pos pos);
 Block *getBlock(Map *map, Pos pos);
@@ -155,18 +153,6 @@ void update(Map *map)
         return;
     }
     entity_setPos(&map->player.entityData, newPos);
-}
-
-Pos addPos(Pos pos1, Pos pos2)
-{
-    Pos newPos = {pos1.x + pos2.x, pos1.y + pos2.y};
-    return newPos;
-}
-
-Pos multiplyPos(Pos pos1, Pos pos2)
-{
-    Pos newPos = {pos1.x * pos2.x, pos1.y * pos2.y};
-    return newPos;
 }
 
 bool testCollision(Map *map, Pos pos)
