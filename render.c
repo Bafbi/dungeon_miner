@@ -1,12 +1,32 @@
 #pragma once
 
+/// Standard lib ///
+#include <math.h>
+///-------------///
+
+/// My file ///
 #include "./class/map.c"
 #include "./utils/ConsoleTools.c"
-// #include "utils/raycasting.c"
-#include <math.h>
+///--------///
 
+/// Public function ///
+/**
+ * @brief Use to render the game in the console
+ *
+ * @param map The pointer of the game map to render
+ */
 void render(Map *map);
-void renderChunk(Chunk chunk, Pos displayPos, Pos start, Pos end);
+///-----------------///
+
+/**
+ * @brief Render a part of a chunk in the console
+ *
+ * @param chunk The chunk to render
+ * @param displayPos The relative position in the console to render the chunk
+ * @param start Starting position of the part of chunk (corner up-left)
+ * @param end Ending position of the part of chunk (corner bottom-right)
+ */
+static void renderChunk(Chunk chunk, Pos displayPos, Pos start, Pos end);
 
 void render(Map *map)
 {
@@ -36,7 +56,7 @@ void render(Map *map)
     moveCursor(0, 16 + 1);
 }
 
-void renderChunk(Chunk chunk, Pos displayPos, Pos start, Pos end)
+static void renderChunk(Chunk chunk, Pos displayPos, Pos start, Pos end)
 {
     for (int y = start.y; y < end.y; y++)
     {
@@ -48,7 +68,7 @@ void renderChunk(Chunk chunk, Pos displayPos, Pos start, Pos end)
 
             Pos posI = {x, y};
 
-            if (chunk.blockData[y * CHUNK_SIZE + x].type != air_block)
+            if (chunk.blockData[y * CHUNK_SIZE + x].type != AIR_BLOCK)
             {
                 plotChar(DurabilityTexture[chunk.blockData[y * CHUNK_SIZE + x].durability]);
             }

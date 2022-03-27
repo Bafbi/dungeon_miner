@@ -69,8 +69,8 @@ Chunk generateChunk(Pos pos)
 
     for (int i = 0; i < CHUNK_SIZE * CHUNK_SIZE; i++)
     {
-        int type = perlinCave[i] < 0.5 ? air_block : perlinOre[i] < 0.95 ? stone_block
-                                                                         : mytrile_block;
+        int type = perlinCave[i] < 0.5 ? AIR_BLOCK : perlinOre[i] < 0.95 ? STONE_BLOCK
+                                                                         : MYTRILE_BLOCK;
         int dura;
         dura = perlinCave[i] < 0.7 ? 1 : perlinCave[i] < 0.8 ? 2
                                      : perlinCave[i] < 0.9   ? 3
@@ -170,7 +170,7 @@ Pos multiplyPos(Pos pos1, Pos pos2)
 
 bool testCollision(Map *map, Pos pos)
 {
-    if (getBlock(map, pos)->type != air_block)
+    if (getBlock(map, pos)->type != AIR_BLOCK)
     {
         return true;
     }
@@ -209,6 +209,6 @@ void mineBlock(Map *map, Pos pos)
     block->durability -= 1;
     if (block->durability == 0)
     {
-        block->type = air_block;
+        block->type = AIR_BLOCK;
     }
 }
