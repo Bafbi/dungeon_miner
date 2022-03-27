@@ -12,8 +12,8 @@ Current look of the game :
 -   Random world generator with perlin noise
 -   A chunk system
 -   Basic movement for the player
--   Simple render that show the current chunk the plyer if in with relative position in the console
--   Ability to the player to destroy block
+-   Simple render that show the current chunk the player is in
+-   Ability fro the player to destroy block
 
 ---
 
