@@ -1,9 +1,16 @@
 #pragma once
 
+#include <limits.h>
+
 typedef struct Pos
 {
     short x, y;
 } Pos;
+
+#define NULL_POS         \
+    {                    \
+        INT_MAX, INT_MIN \
+    }
 
 typedef struct Vec2
 {
