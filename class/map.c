@@ -133,7 +133,7 @@ Map initMap(int loadDistance)
     map.nbChunkLoad = 0;
     map.chunkData = malloc(sizeof(Chunk) * (2 * loadDistance + 1) * (2 * loadDistance + 1));
     loadChunks(&map, loadDistance);
-    Player tmpPlayer = {{{0, 0}, 100, 5}, {0}};
+    Player tmpPlayer = {{{0, 0}, 100}, 5, {0}};
     map.player = tmpPlayer;
 
     return map;
