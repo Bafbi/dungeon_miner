@@ -7,5 +7,6 @@
 typedef struct Player
 {
     Entity entityData;
+    int viewDistance;
     char inventory[9];
 } Player;

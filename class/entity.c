@@ -6,7 +6,6 @@ typedef struct Entity
 {
     Pos pos;
     int health;
-    int light;
 } Entity;
 
 /*

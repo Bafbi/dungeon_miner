@@ -21,11 +21,6 @@ int main(int argc, char const *argv[])
     render(&map);
     while (!GetAsyncKeyState('P'))
     {
-        if (GetAsyncKeyState('L'))
-        {
-            map.player.entityData.light = !map.player.entityData.light;
-            render(&map);
-        }
 
         update(&map);
         render(&map);
