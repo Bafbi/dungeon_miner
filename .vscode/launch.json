@@ -8,6 +8,7 @@
             "name": "(gdb) Lancement de Bash sur Windows",
             "type": "cppdbg",
             "request": "launch",
+            "preLaunchTask": "C/C++: gcc.exe générer le fichier actif",
             "program": "${workspaceFolder}/main.exe",
             "args": [],
             "stopAtEntry": false,
