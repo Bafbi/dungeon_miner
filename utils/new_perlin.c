@@ -1,3 +1,9 @@
+/*
+ * https://gist.github.com/nowl/828013
+ *
+ * made by https://gist.github.com/deeemmell
+ */
+
 #pragma once
 
 #include <math.h>
