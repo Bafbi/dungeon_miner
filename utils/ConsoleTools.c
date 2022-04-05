@@ -378,14 +378,14 @@ int rangedRand(int range_min, int range_max)
 /// </summary>
 /// <param name=""></param>
 /// <returns></returns>
-int clearScreen(short screenSize)
+int clearScreen()
 {
     COORD consoleSize;
 
     consoleSize = getConsoleSize();
     // setWriteColor(GREY);
     // setBackGroundColor(BLACK);
-    for (int i = 0; i < screenSize * 2; i++)
+    for (int i = 0; i < consoleSize.Y * 2; i++)
     {
         for (int j = 0; j < consoleSize.X; j++)
         {

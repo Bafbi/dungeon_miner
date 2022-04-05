@@ -1,12 +1,21 @@
 #pragma once
 
-#include "../utils/utils.h"
+#include "../utils/pos.c"
 
 typedef struct Entity
 {
     Pos pos;
     int health;
 } Entity;
+
+Entity entity_init(Pos pos, int health)
+{
+    Entity entity;
+    entity.pos = pos;
+    entity.health = health;
+
+    return entity;
+}
 
 /*
 // Change la position de l'entité

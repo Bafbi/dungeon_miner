@@ -1,6 +1,6 @@
 #pragma once
 
-#include "utils/utils.h"
+#include "./pos.c"
 
 Pos getMove(int input)
 {

@@ -14,16 +14,17 @@ int main(int argc, char const *argv[])
         return EXIT_FAILURE;
     }
     openConsole();
-
-    Map map = initMap(2);
     hideCursor();
-    clearScreen(30);
-    render(&map);
+    clearScreen();
+
+    Game game = game_init();
+    game_render(game);
+
     while (!GetAsyncKeyState('P'))
     {
 
-        update(&map);
-        render(&map);
+        game_update(game, _getch());
+        game_render(game);
     }
 
     closeConsole();

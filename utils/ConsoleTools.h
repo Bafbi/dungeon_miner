@@ -74,9 +74,10 @@ int setWriteColor(WORD col);
 // change la couleur de fond des caractères
 int setBackGroundColor(WORD col);
 // nettoie l'écran
-int clearScreen(short screenSize);
+int clearScreen();
 // nettoie l'écran aussi
 void cls(HANDLE hConsole);
+
 /*!
  * \fn          int setConsoleScreenBufferInfo(COORD dwSize)
  * \brief       Modifie la taille de la console en cours.
