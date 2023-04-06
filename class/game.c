@@ -4,12 +4,14 @@
 #include "./player.c"
 #include "../utils/ConsoleTools.c"
 #include "../utils/render.c"
+#include "./config.c"
 
 typedef struct Game
 {
     Map *map;
     Player *player;
     Pos *camPos;
+    Config *config;
 } Game;
 
 /// Public function ///
@@ -28,6 +30,7 @@ Game game_init()
     game.map = map_init(2);
     game.player = player_init_ptr(entity_init(pos_init(5, 5), 100), 10);
     game.camPos = pos_init_ptr(consoleSize.X / 2, consoleSize.Y / 2);
+    game.config = config_init_ptr(2);
 
     return game;
 }
@@ -44,6 +47,8 @@ void game_update(Game game, char keyPress)
         return;
     }
     player_move(game.player, move);
+    // game.camPos->x -= move.x;
+    // game.camPos->y -= move.y;
 }
 
 void game_render(Game game)

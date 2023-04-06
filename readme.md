@@ -1,6 +1,6 @@
 # Dungeon Miner Dev branch
 
-### Working on :
+## Working on
 
 > Creating a better render
 
@@ -8,27 +8,27 @@
 
 ## Current Implementation
 
--   Random world generator with perlin noise
--   A chunk system
--   Basic movement for the player
--   Simple render that show the current chunk the player is in
--   Ability fro the player to destroy block
+- Random world generator with perlin noise
+- A chunk system
+- Basic movement for the player
+- Simple render that show the current chunk the player is in
+- Ability fro the player to destroy block
 
 ---
 
 ## Futur Implementation
 
--   A better render with the use of the light as view distance
--   Load and unload chunk dynamically as the player pass chunk
--   Save chunk data into file and load them when needed
--   Render correctly when the user change the console size
--   Made the player pass from one side to another when he is on te border of the console
--   Implement items drop when mine a block
--   Implement inventory with the possibility to pick up items
--   Add more ore
--   Use a generator config for simplify world creation
--   Try to use more colors in console (don't know if it's realy possible)
--   Add multiplayer (will be complicated)
+- A better render with the use of the light as view distance
+- Load and unload chunk dynamically as the player pass chunk
+- Save chunk data into file and load them when needed
+- Render correctly when the user change the console size
+- Made the player pass from one side to another when he is on te border of the console
+- Implement items drop when mine a block
+- Implement inventory with the possibility to pick up items
+- Add more ore
+- Use a generator config for simplify world creation
+- Try to use more colors in console (don't know if it's realy possible)
+- Add multiplayer (will be complicated)
 
 ---
 
